@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class laguages : MonoBehaviour {
-
+		
+	string returnString = "";
 	// Use this for initialization
 	void Start () {
 		
@@ -18,15 +19,15 @@ public class laguages : MonoBehaviour {
 			switch (identifikator)
 			{
 			case "menu_startgame":
-				return "Nová hra";
+				returnString = "Nová hra";
 				break;
 			case "menu_loadgame":
-				return "Nahrát hru";
+				returnString = "Nahrát hru";
 				break;
 			case "menu_settings":
-				return "Nastavení";
+				returnString = "Nastavení";
 				break;
 			}
-		}
+		} return returnString;
 	}
 }
