@@ -3,12 +3,12 @@ using System.Collections;
 
 public class laguages : MonoBehaviour {
 
-	// Use this for initialization
+	
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
 	
 	}
@@ -26,6 +26,7 @@ public class laguages : MonoBehaviour {
 			case "menu_settings":
 				return "Nastavení";
 				break;
+
 			}
 		}
 	}
