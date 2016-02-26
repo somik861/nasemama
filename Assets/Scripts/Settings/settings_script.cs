@@ -18,24 +18,16 @@ public class settings_script : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.skin = menuSkin;
-        GUILayout.BeginArea(new Rect(0, 100, Screen.width, Screen.height));
-        GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        if (GUILayout.Button(language.GetSlovo(jazyk, "settings_setlanguage"), GUILayout.Width(300), GUILayout.Height(75))) 
+        GUIStyle style = menuSkin.button;
+        style.fontSize = (int)(Mathf.Round(Screen.width / 30));
+        if (GUI.Button(new Rect(Screen.width /4, Screen.height / 5, Screen.width / 2, Screen.height / 4.5f), language.GetSlovo(jazyk, "settings_setlanguage"), style))
                 {
 
                 }
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
-        GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        if (GUILayout.Button(language.GetSlovo(jazyk, "settings_backtomenu"), GUILayout.Width(300), GUILayout.Height(75)))
+        if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 2.5f, Screen.width / 2, Screen.height / 4.5f), language.GetSlovo(jazyk, "settings_backtomenu"), style))
                 {
             SceneManager.LoadScene("menu");
                 }
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
-        GUILayout.EndArea();
+       
     }
 }

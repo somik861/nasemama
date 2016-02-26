@@ -4,6 +4,7 @@ using System.Collections;
 public class Languages {
 		
 	string returnString = "";
+    string language = "english";
     public string GetSlovo(string jazyk, string identifikator)
     {
         if (jazyk == "cestina")
@@ -50,5 +51,13 @@ public class Languages {
             }
         }
         return returnString;
+    }
+    public void SetLanguage(string jazyk)
+    {
+        language = jazyk;
+    }
+    public string GetLanguage()
+    {
+        return language;
     }
 }

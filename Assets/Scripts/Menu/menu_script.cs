@@ -21,37 +21,28 @@ public class menu_script : MonoBehaviour {
 	  }
     
     void OnGUI()
-    { 
-        GUI.skin = menuSkin;
-       GUILayout.BeginArea(new Rect(0,0,Screen.width, Screen.height));
-        if(GUILayout.Button(language.GetSlovo(jazyk,"menu_startgame"), GUILayout.Width(Screen.width/2), GUILayout.Height(Screen.height/4.5f)))
+    {
+        GUIStyle style = menuSkin.button;
+        style.fontSize = (int)(Mathf.Round(Screen.width / 30));
+            if (GUI.Button(new Rect(Screen.width / 200, Screen.height / 200, Screen.width / 2, Screen.height / 4.5f),language.GetSlovo(jazyk, "menu_startgame"),style))
              {
                 
              }
-                GUILayout.BeginHorizontal();   
-                    GUILayout.FlexibleSpace(); 
-         if(GUILayout.Button(language.GetSlovo(jazyk,"menu_loadgame"), GUILayout.Width(Screen.width / 2), GUILayout.Height(Screen.height / 4.5f)))
+        if(GUI.Button(new Rect (Screen.width/4,Screen.height/3.5f,Screen.width/2,Screen.height/4.5f),language.GetSlovo(jazyk,"menu_loadgame"),style))
              {
             
              }
-                    GUILayout.FlexibleSpace(); 
-                GUILayout.EndHorizontal();  
-                GUILayout.BeginHorizontal();   
-                    GUILayout.FlexibleSpace(); 
-           if(GUILayout.Button(language.GetSlovo(jazyk,"menu_settings"), GUILayout.Width(Screen.width / 2), GUILayout.Height(Screen.height / 4.5f)))
+        if (GUI.Button(new Rect(Screen.width / 2, Screen.height / 2, Screen.width / 2, Screen.height / 4.5f), language.GetSlovo(jazyk, "menu_settings"), style))
+            
              {
             SceneManager.LoadScene("settings");
              }
-                GUILayout.EndHorizontal(); 
-          GUI.skin = menuSkinVypinac;
-                GUILayout.BeginHorizontal();   
-                    GUILayout.FlexibleSpace(); 
-           if(GUILayout.Button("", GUILayout.Width(Screen.width / 4.5f), GUILayout.Height(Screen.height / 4.5f)))
-              {
+        GUIStyle style_vypinac = menuSkinVypinac.button;
+        GUI.skin = menuSkinVypinac; 
+           if(GUI.Button(new Rect(Screen.width / 1.3f, Screen.height / 1.3f, Screen.width / 4.5f, Screen.height / 4.5f),"", style_vypinac))
+        {
                          Application.Quit();
-              }
-                GUILayout.EndHorizontal();  
-       GUILayout.EndArea();
+        }
     }
     
 }
