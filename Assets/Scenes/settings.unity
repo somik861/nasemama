@@ -246,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuSkin: {fileID: 0}
   menuSkinVypinac: {fileID: 0}
-  jazyk: cestina
 --- !u!1 &530996255
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cb0644d51e0b24fbfdaa2cc7ecc143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jazyk: cestina
   menuSkin: {fileID: 11400000, guid: cb551c652d123ce469e99f94352342d2, type: 2}
 --- !u!4 &530996257
 Transform:

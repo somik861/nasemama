@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class setLanguage : MonoBehaviour {
-    Languages language = new Languages();
+    public static string global_jazyk = "english";
     public GUIStyle style = new GUIStyle();
     public GUISkin menuSkin;
     // Use this for initialization
-    void Start () {
-	
-	}
+    void Start() {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,15 +20,15 @@ public class setLanguage : MonoBehaviour {
         GUIStyle style = menuSkin.button;
         
         GUILayout.BeginHorizontal();
-        if (GUI.Button(new Rect(Screen.width / 200, Screen.height / 200, Screen.width / 2, Screen.height / 4.5f), language.GetSlovo(jazyk, "menu_startgame"), style))
+        if (GUI.Button(new Rect(Screen.width / 200, Screen.height / 200, Screen.width / 3, Screen.height / 4), "English", style))
         {
-            language.SetLanguage("cestina");
+            global_jazyk = "english";
+            SceneManager.LoadScene("settings");
         }
-        if
-{
-            language.SetLanguage("english");
+        if (GUI.Button(new Rect(Screen.width / 3, Screen.height / 200, Screen.width / 3, Screen.height / 4), "Čeština", style))
+        {
+            global_jazyk = "cestina";
+            SceneManager.LoadScene("settings");
         }
-        GUILayout.EndHorizontal();
-        GUILayout.EndArea();
     }
 }
