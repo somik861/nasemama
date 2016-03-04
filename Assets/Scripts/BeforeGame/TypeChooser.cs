@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TypeChooser : MonoBehaviour {
     public GUISkin ChooserSkin;
@@ -15,6 +16,8 @@ public class TypeChooser : MonoBehaviour {
 
     void OnGUI (){
         GUIStyle style = ChooserSkin.button;
-        GUI.Button(new Rect(Screen.width/3, Screen.height/8,Screen.width/3,Screen.height/1.25f),"",style);
+        if (GUI.Button(new Rect(Screen.width/3, Screen.height / 8, Screen.width / 3, Screen.height / 1.25f), "", style)){
+            SceneManager.LoadScene("InGame1v1");
+        }
     }
 }
