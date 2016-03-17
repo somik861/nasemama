@@ -85,15 +85,62 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &677279281
+--- !u!1 &315569497
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 677279283}
-  - 212: {fileID: 677279282}
+  - 4: {fileID: 315569498}
+  - 114: {fileID: 315569499}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315569498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315569497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &315569499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315569497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17bcdd0ee1a2e844af53c61318afc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin_mapa_Forta: {fileID: 11400000, guid: afee6f75ec824bc4ca57eee35ca684fe, type: 2}
+  skin_mapa_Koila: {fileID: 11400000, guid: df9e23fa913191e4587080dc3ceb398e, type: 2}
+  skin_mapa_Gajuta: {fileID: 11400000, guid: 8589e9b6ffc45db47bdb0e0de97222db, type: 2}
+  skin_mapa_Omaron: {fileID: 11400000, guid: af6a3136fa1d68f46bb4183254c47924, type: 2}
+  skin_mapa_Pountedal: {fileID: 11400000, guid: 083cc1fd1b4efce4baeb720f870893d4,
+    type: 2}
+  skin_mapa_Rountha: {fileID: 11400000, guid: f8bd72112c4beda45af67dedbc2d0959, type: 2}
+  menuSkin: {fileID: 11400000, guid: cb551c652d123ce469e99f94352342d2, type: 2}
+--- !u!1 &1214559223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1214559225}
+  - 212: {fileID: 1214559224}
   m_Layer: 0
   m_Name: InGameBackground
   m_TagString: Untagged
@@ -101,12 +148,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &677279282
+--- !u!212 &1214559224
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 677279281}
+  m_GameObject: {fileID: 1214559223}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -131,30 +178,30 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!4 &677279283
+--- !u!4 &1214559225
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 677279281}
+  m_GameObject: {fileID: 1214559223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
---- !u!1 &745050165
+  m_RootOrder: 2
+--- !u!1 &1309924113
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 745050170}
-  - 20: {fileID: 745050169}
-  - 92: {fileID: 745050168}
-  - 124: {fileID: 745050167}
-  - 81: {fileID: 745050166}
+  - 4: {fileID: 1309924118}
+  - 20: {fileID: 1309924117}
+  - 92: {fileID: 1309924116}
+  - 124: {fileID: 1309924115}
+  - 81: {fileID: 1309924114}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -162,33 +209,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &745050166
+--- !u!81 &1309924114
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745050165}
+  m_GameObject: {fileID: 1309924113}
   m_Enabled: 1
---- !u!124 &745050167
+--- !u!124 &1309924115
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745050165}
+  m_GameObject: {fileID: 1309924113}
   m_Enabled: 1
---- !u!92 &745050168
+--- !u!92 &1309924116
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745050165}
+  m_GameObject: {fileID: 1309924113}
   m_Enabled: 1
---- !u!20 &745050169
+--- !u!20 &1309924117
 Camera:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745050165}
+  m_GameObject: {fileID: 1309924113}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -217,61 +264,15 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &745050170
+--- !u!4 &1309924118
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745050165}
+  m_GameObject: {fileID: 1309924113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1 &1190839180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1190839182}
-  - 114: {fileID: 1190839181}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1190839181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190839180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09d08d00ff47294e83fb31f12b6c075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skin_mapa_Forta: {fileID: 11400000, guid: afee6f75ec824bc4ca57eee35ca684fe, type: 2}
-  skin_mapa_Koila: {fileID: 11400000, guid: df9e23fa913191e4587080dc3ceb398e, type: 2}
-  skin_mapa_Gajuta: {fileID: 11400000, guid: 8589e9b6ffc45db47bdb0e0de97222db, type: 2}
-  skin_mapa_Omaron: {fileID: 11400000, guid: af6a3136fa1d68f46bb4183254c47924, type: 2}
-  skin_mapa_Pountedal: {fileID: 11400000, guid: 083cc1fd1b4efce4baeb720f870893d4,
-    type: 2}
-  skin_mapa_Rountha: {fileID: 11400000, guid: f8bd72112c4beda45af67dedbc2d0959, type: 2}
---- !u!4 &1190839182
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190839180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2

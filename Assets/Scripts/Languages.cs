@@ -28,6 +28,15 @@ public class Languages
                 case "settings_backtomenu":
                     returnString = "Zpět do menu";
                     break;
+                case "ingame_selectarea":
+                    returnString = "Vyberte oblast"; 
+                    break;
+                case "ingame_selected":
+                    returnString = "Vybráno:";
+                    break;
+                case "ingame_accept:":
+                    returnString = "Potvrdit";
+                    break;
 
             }
         }
@@ -49,6 +58,15 @@ public class Languages
                     break;
                 case "settings_backtomenu":
                     returnString = "Back to menu";
+                    break;
+                case "ingame_selectarea":
+                    returnString = "Select location";
+                    break;
+                case "ingame_selected":
+                    returnString = "Selected:";
+                    break;
+                case "ingame_accept:":
+                    returnString = "Accept";
                     break;
             }
         }
