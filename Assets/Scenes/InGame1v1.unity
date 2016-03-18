@@ -263,6 +263,8 @@ MonoBehaviour:
   skin_mapa_Pountedal: {fileID: 11400000, guid: 083cc1fd1b4efce4baeb720f870893d4,
     type: 2}
   skin_mapa_Rountha: {fileID: 11400000, guid: f8bd72112c4beda45af67dedbc2d0959, type: 2}
+  suroviny: {fileID: 11400000, guid: 47299897f943b6143908e63ebff9683e, type: 2}
+  menuSkin: {fileID: 11400000, guid: 35d24d5d2b6102d449ab00be9e0db186, type: 2}
 --- !u!4 &1367641095
 Transform:
   m_ObjectHideFlags: 0

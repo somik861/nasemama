@@ -16,7 +16,9 @@ public class InGame1v1 : MonoBehaviour {
     GUIStyle style_mapa_Pountedal;
     GUIStyle style_mapa_Rountha;
 
+    public GUISkin suroviny;
     public GUISkin menuSkin;
+    GUIStyle style_suroviny;
     GUIStyle text;
     string selected;
     string zakladna = "";
@@ -25,7 +27,8 @@ public class InGame1v1 : MonoBehaviour {
     int mezifps = 0;
     float deltatime;
     int sec = 0;
-    int min = 0;  
+    int min = 0;
+      
 	// Use this for initialization
 	void Start () {
         style_mapa_Forta = skin_mapa_Forta.button;
@@ -39,22 +42,25 @@ public class InGame1v1 : MonoBehaviour {
         selected = zakladna;
         text = menuSkin.button;
         text.fontSize = (int)(Mathf.Round(Screen.width / 30));
+        style_suroviny = suroviny.button;
+        style_suroviny.fontSize = (int)(Mathf.Round(Screen.width / 30));
     }
 	
 	// Update is called once per frame
 	void Update () {
         mezifps +=1;
-	      deltatime = deltatime + Time.deltaTime();
+	      deltatime = deltatime + Time.deltaTime;
         if (deltatime > 1) {
             fps = mezifps;
             mezifps = 0;
             sec += 1;
             deltatime -=1;
         }
-        if (sec > 60) {
-            min +=1
-            sec -=60
+        if (sec > 59) {
+            min += 1;
+            sec -= 60;
         }
+        time = (min + " : " + sec + " FPS: " + fps);
 	}
 
     void OnGUI() {
@@ -85,10 +91,10 @@ public class InGame1v1 : MonoBehaviour {
         
         
         // tady se vykresluje horní menu
-        if (GUI.Button(new Rect(0,0, Screen.width / 4, Screen.height/9),"moje")){
+        if (GUI.Button(new Rect(0,0, Screen.width / 4, Screen.height/9),time,text)){
                   
         }
-        if (GUI.Button(new Rect(Screen.width / 4, 0, Screen.width/2, Screen.height / 9), "moje"))
+        if (GUI.Button(new Rect(Screen.width / 4, 0, Screen.width/2, Screen.height / 9), "", style_suroviny))
         {
 
         }
@@ -103,7 +109,7 @@ public class InGame1v1 : MonoBehaviour {
         if (GUI.Button(new Rect(0,Screen.height-Screen.height/9,Screen.width/4, Screen.height/9),"moje")){
           
         }   
-        if (GUI.Button(new Rect(Screen.width/4,Screen.height-Screen.height/9,Screen.width/2, Screen.height/9),selected)){
+        if (GUI.Button(new Rect(Screen.width/4,Screen.height-Screen.height/9,Screen.width/2, Screen.height/9),selected,text)){
           
         }
         if (GUI.Button(new Rect((Screen.width/2+Screen.width/4),Screen.height-Screen.height/9,Screen.width/4, Screen.height/9),"moje")){
