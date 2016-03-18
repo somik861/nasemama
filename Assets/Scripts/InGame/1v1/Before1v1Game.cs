@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +22,7 @@ public class Before1v1Game : MonoBehaviour {
     string selected;
     Languages language = new Languages();
     string Jazyk;
+    public static string zakladna = "";
     // Use this for initialization
     void Start()
     {
@@ -33,7 +34,7 @@ public class Before1v1Game : MonoBehaviour {
         style_mapa_Pountedal = skin_mapa_Pountedal.button;
         style_mapa_Rountha = skin_mapa_Rountha.button;
 
-        selected = "";
+        selected = "Forta";
         Jazyk = setLanguage.global_jazyk;
         if (Jazyk == "") Jazyk= "english";
         text.fontSize = (int)(Mathf.Round(Screen.width / 30));
@@ -78,6 +79,10 @@ public class Before1v1Game : MonoBehaviour {
         }
         GUI.Label(new Rect(0, 0, Screen.width, Screen.height/8), language.GetSlovo(Jazyk,"ingame_selectarea"),text);
         GUI.Label(new Rect(0, Screen.height - Screen.height / 8, Screen.width / 2, Screen.height / 8), language.GetSlovo(Jazyk, "ingame_selected") + " "+ selected, text);
-        GUI.Button(new Rect(Screen.width / 2, Screen.height - Screen.height / 8, Screen.width / 3, Screen.height / 8), language.GetSlovo(Jazyk, "ingame_accept"), text);
+        if (GUI.Button(new Rect(Screen.width / 2, Screen.height - Screen.height / 8, Screen.width / 3, Screen.height / 8), language.GetSlovo(Jazyk, "ingame_accept"), text)) 
+        {
+            zakladna = "selected";
+            SceneManager.LoadScene("InGame1v1");
+        }
     }
 }

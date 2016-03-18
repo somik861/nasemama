@@ -16,7 +16,16 @@ public class InGame1v1 : MonoBehaviour {
     GUIStyle style_mapa_Pountedal;
     GUIStyle style_mapa_Rountha;
 
+    public GUISkin menuSkin;
+    GUIStyle text;
     string selected;
+    string zakladna = "";
+    string time;
+    int fps = 0;
+    int mezifps = 0;
+    float deltatime;
+    int sec = 0;
+    int min = 0;  
 	// Use this for initialization
 	void Start () {
         style_mapa_Forta = skin_mapa_Forta.button;
@@ -25,13 +34,27 @@ public class InGame1v1 : MonoBehaviour {
         style_mapa_Omaron = skin_mapa_Omaron.button;
         style_mapa_Pountedal = skin_mapa_Pountedal.button;
         style_mapa_Rountha = skin_mapa_Rountha.button;
-
-        selected = "";
+        
+        zakladna = Before1v1Game.zakladna;
+        selected = zakladna;
+        text = menuSkin.button;
+        text.fontSize = (int)(Mathf.Round(Screen.width / 30));
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
+        mezifps +=1;
+	      deltatime = deltatime + Time.deltaTime();
+        if (deltatime > 1) {
+            fps = mezifps;
+            mezifps = 0;
+            sec += 1;
+            deltatime -=1;
+        }
+        if (sec > 60) {
+            min +=1
+            sec -=60
+        }
 	}
 
     void OnGUI() {
@@ -58,9 +81,12 @@ public class InGame1v1 : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width/1.35f, Screen.height/2.25f, Screen.width/4, Screen.height/5), "", style_mapa_Rountha)) {
             selected = "Rountha";
         }
+        
+        
+        
         // tady se vykresluje horní menu
         if (GUI.Button(new Rect(0,0, Screen.width / 4, Screen.height/9),"moje")){
-          
+                  
         }
         if (GUI.Button(new Rect(Screen.width / 4, 0, Screen.width/2, Screen.height / 9), "moje"))
         {
@@ -70,6 +96,9 @@ public class InGame1v1 : MonoBehaviour {
         {
 
         }
+        
+        
+        
         // tady se vykresluje dolní menu
         if (GUI.Button(new Rect(0,Screen.height-Screen.height/9,Screen.width/4, Screen.height/9),"moje")){
           

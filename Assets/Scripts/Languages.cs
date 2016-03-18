@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -34,8 +34,11 @@ public class Languages
                 case "ingame_selected":
                     returnString = "Vybráno:";
                     break;
-                case "ingame_accept:":
+                case "ingame_accept":
                     returnString = "Potvrdit";
+                    break; 
+                default: 
+                    returnString = "";
                     break;
 
             }
@@ -62,11 +65,14 @@ public class Languages
                 case "ingame_selectarea":
                     returnString = "Select location";
                     break;
+                case "ingame_accept":
+                    returnString = "Accept";
+                    break;
                 case "ingame_selected":
                     returnString = "Selected:";
                     break;
-                case "ingame_accept:":
-                    returnString = "Accept";
+                default: 
+                    returnString = "";
                     break;
             }
         }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +17,7 @@ public class TypeChooser : MonoBehaviour {
     void OnGUI (){
         GUIStyle style = ChooserSkin.button;
         if (GUI.Button(new Rect(Screen.width/3, Screen.height / 8, Screen.width / 3, Screen.height / 1.25f), "", style)){
-            SceneManager.LoadScene("InGame1v1");
+            SceneManager.LoadScene("Before1v1Game");
         }
     }
 }
