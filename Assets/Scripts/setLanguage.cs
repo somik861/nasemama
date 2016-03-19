@@ -23,12 +23,12 @@ public class setLanguage : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width / 200, Screen.height / 200, Screen.width / 3, Screen.height / 4), "English", style))
         {
             global_jazyk = "english";
-            SceneManager.LoadScene("settings");
+            SceneManager.LoadScene("1");
         }
         if (GUI.Button(new Rect(Screen.width / 3, Screen.height / 200, Screen.width / 3, Screen.height / 4), "Čeština", style))
         {
             global_jazyk = "cestina";
-            SceneManager.LoadScene("settings");
+            SceneManager.LoadScene("1");
         }
     }
 }

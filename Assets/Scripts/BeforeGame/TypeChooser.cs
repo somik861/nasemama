@@ -17,7 +17,7 @@ public class TypeChooser : MonoBehaviour {
     void OnGUI (){
         GUIStyle style = ChooserSkin.button;
         if (GUI.Button(new Rect(Screen.width/3, Screen.height / 8, Screen.width / 3, Screen.height / 1.25f), "", style)){
-            SceneManager.LoadScene("Before1v1Game");
+            SceneManager.LoadScene("4");
         }
     }
 }

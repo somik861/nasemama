@@ -82,7 +82,7 @@ public class Before1v1Game : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width / 2, Screen.height - Screen.height / 8, Screen.width / 3, Screen.height / 8), language.GetSlovo(Jazyk, "ingame_accept"), text)) 
         {
             zakladna = "selected";
-            SceneManager.LoadScene("InGame1v1");
+            SceneManager.LoadScene("5");
         }
     }
 }
