@@ -17,9 +17,15 @@ public class InGame1v1 : MonoBehaviour {
     GUIStyle style_mapa_Rountha;
 
     public GUISkin suroviny;
-    public GUISkin menuSkin;
+    public GUISkin ingameGUI;
+    public GUISkin ingameGUI_menu;
+    public GUISkin ingameGUI_fps;
+    public GUISkin ingameGUI_layout;
+    GUIStyle style_ingameGUI_layout;
     GUIStyle style_suroviny;
     GUIStyle text;
+    GUIStyle style_ingameGUI_menu;
+    GUIStyle style_ingameGUI_fps;
     string selected;
     string zakladna = "";
     string time;
@@ -39,11 +45,18 @@ public class InGame1v1 : MonoBehaviour {
         style_mapa_Rountha = skin_mapa_Rountha.button;
         
         zakladna = Before1v1Game.zakladna;
+        if (zakladna == "") {
+            zakladna = "Forta";
+        }
         selected = zakladna;
-        text = menuSkin.button;
+        text = ingameGUI.button;
         text.fontSize = (int)(Mathf.Round(Screen.width / 30));
         style_suroviny = suroviny.button;
         style_suroviny.fontSize = (int)(Mathf.Round(Screen.width / 30));
+        style_ingameGUI_menu = ingameGUI_menu.button;
+        style_ingameGUI_fps = ingameGUI_fps.button;
+        style_ingameGUI_fps.fontSize = (int)(Mathf.Round(Screen.width / 30));
+        style_ingameGUI_layout = ingameGUI_layout.button;
     }
 	
 	// Update is called once per frame
@@ -87,18 +100,19 @@ public class InGame1v1 : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width/1.35f, Screen.height/2.25f, Screen.width/4, Screen.height/5), "", style_mapa_Rountha)) {
             selected = "Rountha";
         }
-        
-        
-        
+
+
+
         // tady se vykresluje horní menu
-        if (GUI.Button(new Rect(0,0, Screen.width / 4, Screen.height/9),time,text)){
+        GUI.Label(new Rect(0, 0, Screen.width, Screen.height / 9), "", style_ingameGUI_layout);
+        if (GUI.Button(new Rect(0,0, Screen.width / 4, Screen.height/9),time,style_ingameGUI_fps)){
                   
         }
-        if (GUI.Button(new Rect(Screen.width / 4, 0, Screen.width/2, Screen.height / 9), "", style_suroviny))
+        if (GUI.Button(new Rect(Screen.width / 4, 0, Screen.width/2 + Screen.width /4 - Screen.width /16, Screen.height / 9), "", style_suroviny))
         {
 
         }
-        if (GUI.Button(new Rect((Screen.width / 2 + Screen.width / 4), 0, Screen.width/4, Screen.height / 9), "moje"))
+        if (GUI.Button(new Rect((Screen.width - Screen.width/16), 0, Screen.width/16, Screen.height / 9), "",style_ingameGUI_menu))
         {
 
         }
@@ -112,7 +126,7 @@ public class InGame1v1 : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width/4,Screen.height-Screen.height/9,Screen.width/2, Screen.height/9),selected,text)){
           
         }
-        if (GUI.Button(new Rect((Screen.width/2+Screen.width/4),Screen.height-Screen.height/9,Screen.width/4, Screen.height/9),"moje")){
+        if (GUI.Button(new Rect(Screen.width/2 + Screen.width/4,Screen.height-Screen.height/9,Screen.width/4, Screen.height/9),"moje")){
           
         }
     }
