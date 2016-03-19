@@ -264,7 +264,11 @@ MonoBehaviour:
     type: 2}
   skin_mapa_Rountha: {fileID: 11400000, guid: f8bd72112c4beda45af67dedbc2d0959, type: 2}
   suroviny: {fileID: 11400000, guid: 47299897f943b6143908e63ebff9683e, type: 2}
-  menuSkin: {fileID: 11400000, guid: 35d24d5d2b6102d449ab00be9e0db186, type: 2}
+  ingameGUI: {fileID: 11400000, guid: 35d24d5d2b6102d449ab00be9e0db186, type: 2}
+  ingameGUI_menu: {fileID: 11400000, guid: 589fff94ba7c95b4ca2f90983ca1364b, type: 2}
+  ingameGUI_fps: {fileID: 11400000, guid: 8cca9f821821c3741a3c8bcbafc169a9, type: 2}
+  ingameGUI_layout: {fileID: 11400000, guid: 102046c7ea993ca4998756563ac66dfb, type: 2}
+  ingame_menu_layout: {fileID: 11400000, guid: 7ee23733f9a5a104caca00d119d16d33, type: 2}
 --- !u!4 &1367641095
 Transform:
   m_ObjectHideFlags: 0
