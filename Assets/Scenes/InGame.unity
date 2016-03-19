@@ -268,6 +268,7 @@ MonoBehaviour:
   ingameGUI_menu: {fileID: 11400000, guid: 589fff94ba7c95b4ca2f90983ca1364b, type: 2}
   ingameGUI_fps: {fileID: 11400000, guid: 8cca9f821821c3741a3c8bcbafc169a9, type: 2}
   ingameGUI_layout: {fileID: 11400000, guid: 102046c7ea993ca4998756563ac66dfb, type: 2}
+  ingame_menu_layout: {fileID: 11400000, guid: 7ee23733f9a5a104caca00d119d16d33, type: 2}
 --- !u!4 &1190839182
 Transform:
   m_ObjectHideFlags: 0

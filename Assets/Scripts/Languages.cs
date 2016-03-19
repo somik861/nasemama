@@ -36,7 +36,13 @@ public class Languages
                     break;
                 case "ingame_accept":
                     returnString = "Potvrdit";
-                    break; 
+                    break;
+                case "ingame_menu_saveandquit":
+                    returnString = "Uložit a ukončit";
+                    break;
+                case "ingame_menu_continue":
+                    returnString = "Pokračovat";
+                    break;
                 default: 
                     returnString = "";
                     break;
@@ -70,6 +76,12 @@ public class Languages
                     break;
                 case "ingame_selected":
                     returnString = "Selected:";
+                    break;
+                case "ingame_menu_saveandquit":
+                    returnString = "Save and quit";
+                    break;
+                case "ingame_menu_continue":
+                    returnString = "Continue";
                     break;
                 default: 
                     returnString = "";
